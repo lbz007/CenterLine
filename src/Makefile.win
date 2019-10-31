@@ -1,0 +1,43 @@
+# Project: get_center_points
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = ini_variables.o main.o show_ini_info.o isPointInPloygon.o gen_centerNode.o dump_result.o
+LINKOBJ  = ini_variables.o main.o show_ini_info.o isPointInPloygon.o gen_centerNode.o dump_result.o
+LIBS     = -L"D:/program files/Dev-Cpp/MinGW64/lib32" -L"D:/program files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
+INCS     = -I"D:/program files/Dev-Cpp/MinGW64/include" -I"D:/program files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/program files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/program files/Dev-Cpp/MinGW64/include" -I"D:/program files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/program files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/program files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = get_center_points.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+ini_variables.o: ini_variables.cpp
+	$(CPP) -c ini_variables.cpp -o ini_variables.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+show_ini_info.o: show_ini_info.cpp
+	$(CPP) -c show_ini_info.cpp -o show_ini_info.o $(CXXFLAGS)
+
+isPointInPloygon.o: isPointInPloygon.cpp
+	$(CPP) -c isPointInPloygon.cpp -o isPointInPloygon.o $(CXXFLAGS)
+
+gen_centerNode.o: gen_centerNode.cpp
+	$(CPP) -c gen_centerNode.cpp -o gen_centerNode.o $(CXXFLAGS)
+
+dump_result.o: dump_result.cpp
+	$(CPP) -c dump_result.cpp -o dump_result.o $(CXXFLAGS)
