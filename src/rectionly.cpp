@@ -4,11 +4,6 @@
 #include <iostream>
 using namespace std;
 
-struct lin
-{
-    double a;double b;double c;
-};
-
 /* double calcxl(pos a,pos b) */
 /* { */
 /* 	if (fabs(b.x-a.x)<0.00000001) */
@@ -68,7 +63,7 @@ void rectonly()
             {
                 if (unsamexl>5)
                 {
-                    l1=twopoint(centerNode[i],centerNode[i-1]);
+                   l1=twopoint(centerNode[i],centerNode[i-1]);
                     l2=twopoint(recNode[recNode_num-1],recNode[recNode_num-2]);
                     recNode_num++;
                     recNode.push_back(twoline(l1,l2));

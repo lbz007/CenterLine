@@ -2,6 +2,7 @@
 #include "global.h"
 #include <iomanip>
 #include <cstdio>
+#include <algorithm>
 using namespace std;
 
 void show_ini_info(){
@@ -22,6 +23,7 @@ void show_ini_info(){
 		/* cout << NodeList[i].x << " " << NodeList[i].y << endl; */
     /* } */
     /* fclose(stdout); */
+    
 
 	cout<<endl << "Edge Infomation..." << endl;
 	for (int i = 0; i < Edge_num; i++){
