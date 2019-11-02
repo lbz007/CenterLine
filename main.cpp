@@ -9,8 +9,10 @@ string mapFile; //输入的文件名带后缀
 string pureName; //输入的文件名 不带后缀 
 //算法数据初始化全局变量 
 int Node_num=0;       	//多边形节点数
+int Node_num2=0;       	//多边形节点数
 int recNode_num=0;
 vector<pos> NodeList;      	//多边形节点坐标
+vector<pos> NodeList2;      	//多边形节点坐标
 vector<pos> recNode;      	//多边形节点坐标
 int Edge_num=0;       	//多边形边数
 vector<line> total_LineList;   //总多边形边链表
@@ -29,12 +31,14 @@ double y_max=-10000;
 int centerNode_num=0;     //生成中点的数目 
 vector<pos> centerNode;        //生成的中点 
 vector<double> evaluation;   //代价值 
+vector<LLength> LineLength;
 
 double precision=PRECISION;   //网格间距
 
 int main(){
 	initialization();
 	show_ini_info();
+    refine_boundary();
 	gen_centerNode(); 
     refine_centerNode();
 	dump_result();
