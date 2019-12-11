@@ -1,9 +1,11 @@
 # CenterLine
-## Install
-rm -r -f build
-mkdir build
-cmake ..
-make
+## Compiling using Cmake
+cd FCsearch  
+rm -r build  
+mkdir build  
+cd build  
+cmake .. 
+make	
 
-## Run
-./main
+## Running(make sure current directory is: ~/FCsearch/build)
+./lineExt boundary_x.txt
