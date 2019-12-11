@@ -4,7 +4,7 @@ cd FCsearch
 rm -r build  
 mkdir build  
 cd build  
-cmake .. 
+cmake ..  
 make	
 
 ## Running(make sure current directory is: ~/FCsearch/build)
